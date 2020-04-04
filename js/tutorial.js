@@ -21,7 +21,7 @@ fetch(API_URL) // pass the API URL into the fetch function
     // create a loop to render one movie card per movie
     for (let i = 0; i < data.length; i++) {
       // create the card
-      const html = `<img class="movie-card-img" 
+      const html = `<img class="movie-card-img"
                             src="${data[i].image.original}"
                             alt="${data[i].name}"
                             width="240"
