@@ -1,33 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>TV Land</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <LINK rel="shortcut icon" href="logo.png">
+<title>TVLAND</title>
+
+
 </head>
 <body>
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <div id="navigation-container">
+          <img src="logo.png">
+          <ul>
 
- <header>
-  <h1>TV LAND</h1>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
 
-  <div class="topnav">
-    <a class="active" href="#home">Home</a>
-    <a href="#news">News</a>
-    <a href="#about">About</a>
-  </div>
-</header>
+      <div id="navbarMenuHeroB" class="navbar-menu">
+        <div class="navbar-end">
 
-    <div id="content">
-        <h1>Movies</h1>
-        <section class="column-content">
+          <a class="navbar-item" href="index.html">
+            HOME
+          </a>
+          <a class="navbar-item" href="news.html">
+            NEWS
+          </a>
 
-            <div class="movie-card">
+          <a class="navbar-item" href="tvshow.html">
+            TV SHOWS
+          </a>
 
-            </div>
+          <a class="navbar-item" href="movies.html">
+            MOVIES
+          </a>
+          <a class="navbar-item" href="form/contact.html">
+            CONTACT
+          </a>
 
-        </section>
+          <a class="navbar-item" href="register.html">
+            SIGNUP
+          </a>
+
+          <!--the beging of the form -->
+          <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/img_avatar2.png" alt="Avatar" class="avatar">
     </div>
-    <script src="./js/tutorial.js"></script>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+          <!--end of form -->
+
+
+
+          <div class="navbar-item">
+            <div class="buttons">
+              <div class="field is-grouped">
+                <p class="control is-expanded">
+                  <input class="input" type="text" placeholder="Search for any movie or series" id="searchQuery">
+                </p>
+                <p class="control">
+                  <a class="button is-info" id="search">
+                    Search
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+      <div class="loading-icon animate fadeIn">
+        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </div>
+      <div class="columns is-multiline is-mobile" id="contentContainer"></div>
+  </div>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      Our TVLAND 2020
+    </div>
+  </footer>
+  <script src="./js/script.js"></script>
 </body>
 </html>
